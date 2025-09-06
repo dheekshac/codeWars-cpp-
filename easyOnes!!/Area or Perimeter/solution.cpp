@@ -1,3 +1,8 @@
-int area_or_perimeter(int a , int b) {
-  return a == b ? a * b : 2 * (a + b);
-} 
+int area_or_perimeter(int l , int w) {
+  if(l==w){
+    return l*w;
+  }
+  else{
+    return 2*(l+w);
+  }
+}
