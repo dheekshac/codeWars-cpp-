@@ -1,6 +1,9 @@
 #include <string>
-#include <algorithm>
-
+#include <cctype>
 bool is_uppercase(const std::string &s) {
-  return std::none_of(s.begin(), s.end(), islower);
+  bool flag=true;
+  for(char c:s){
+    if(!isupper(c)&&isalpha(c)){flag=false;} //if a character exists and is not uppercase then return false 
+  }
+  return flag; //return true if the character is uppercase
 }
