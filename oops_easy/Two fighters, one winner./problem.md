@@ -16,3 +16,44 @@ declare_winner(Fighter("Lew", 10, 2), Fighter("Harry", 5, 4), "Lew") => "Lew"
   Lew attacks Harry; Harry now has 1 health.
   Harry attacks Lew; Lew now has 2 health.
   Lew attacks Harry: Harry now has -1 health and is dead. Lew wins.
+# refer to the class below 
+```
+class Fighter
+{
+private:
+    std::string name;
+    
+    int health;
+    
+    int damagePerAttack;
+
+public:
+    Fighter(std::string name, int health, int damagePerAttack)
+    {
+        this->name = name;
+        this->health = health;
+        this->damagePerAttack = damagePerAttack;
+    }
+    
+    ~Fighter() { };
+    
+    std::string getName()
+    {
+        return name;
+    }
+    
+    int getHealth()
+    {
+        return health;
+    }
+    
+    int getDamagePerAttack()
+    {
+        return damagePerAttack;
+    }
+    
+    void setHealth(int value)
+    {
+        health = value;
+    }
+};
